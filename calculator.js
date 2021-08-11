@@ -57,16 +57,16 @@
     if (typeof currentVal !== "number") currentVal = parseFloat(currentVal);
     switch (action) {
       case "add":
-        total = total + currentVal;
+        total += currentVal;
         break;
       case "subtract":
-        total = total - currentVal;
+        total -= currentVal;
         break;
       case "multiply":
-        total = total * currentVal;
+        total *= currentVal;
         break;
       case "divide":
-        total = total / currentVal;
+        total /= currentVal;
         break;
       default:
         if (total == 0 && total !== currentVal) total = currentVal;
@@ -122,7 +122,7 @@
     if (val.length > 3) val = formatVal(val);
     // 如果有小數要把小數加回來
     if (decimal.length > 0) {
-      val = val + decimal;
+      val += decimal;
     }
     if (val != val) val = "Not a Number!";
     // innerHTML
